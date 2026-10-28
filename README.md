@@ -51,10 +51,6 @@ Ayuda «Cómo se usa» por lista, en modo oscuro y en modo claro:
 
 ![Ayuda por lista en modo claro](images/pendraboot-ayuda-lista-claro.jpg)
 
-Exclusión de la USB destino en la opción 3:
-
-![Exclusión del destino](images/pendraboot-exclusion-destino.jpg)
-
 Sección de la opción 3 con los cuadros manuales:
 
 ![Sección opción 3 con cuadros manuales](images/pendraboot-seccion3-1.3.jpg)
