@@ -25,6 +25,11 @@ Escrito en C++ con FLTK, compilado dentro de FLinux 17.1 de 32 bits y empaquetad
 - La USB destino queda excluida por completo de la búsqueda: no hace falta formatearla antes de la opción 3, y una versión vieja instalada en ella no puede colarse en la ISO.
 - La pestaña «Cómo se usa» de la ayuda muestra los pasos ordenados por lista.
 
+## Novedades en la 1.3
+
+- La opción 3 permite elegir a mano el kernel/core y la carpeta de extensiones, con dos cuadros y botón Examinar («core.gz:» y «Extensiones (tce/cde):»).
+- Si los dos cuadros se dejan vacíos, la detección automática de la 1.2 sigue funcionando. La selección manual anula la detección para esa parte y se respeta aunque apunte a la USB destino.
+
 ## Imágenes
 
 Modo oscuro:
@@ -57,17 +62,21 @@ Exclusión de la USB destino en la opción 3 (versión 1.2):
 
 ![Exclusión del destino](images/pendraboot-exclusion-destino.jpg)
 
+Sección de la opción 3 con los cuadros manuales (versión 1.3):
+
+![Sección opción 3 con cuadros manuales](images/pendraboot-seccion3-1.3.jpg)
+
 ## Créditos
 
 Idea original: Nicolás Longardi, creador de FLinux, que dio la idea en un directo en Kick y con ella inspiró este proyecto. PendraBoot fue desarrollado por Juan Carlos (Juanca) para la comunidad FLinux.
 
 ## Instalación
 
-Copiar `pendraboot-1.2.tcz`, `pendraboot-1.2.tcz.dep` y `pendraboot-1.2.tcz.md5.txt` (de la Release) a `tce/optional/`, añadir `pendraboot-1.2` a `onboot.lst` (o `tce-load -i pendraboot-1.2.tcz`) y ejecutar `pendraboot`.
+Copiar `pendraboot-1.3.tcz`, `pendraboot-1.3.tcz.dep` y `pendraboot-1.3.tcz.md5.txt` (de la Release) a `tce/optional/`, añadir `pendraboot-1.3` a `onboot.lst` (o `tce-load -i pendraboot-1.3.tcz`) y ejecutar `pendraboot`.
 
 ## Estado
 
-Versión 1.2 (prerelease): probada en invitado FLinux 17.1 sin wifi (opción 3 en 5 escenarios: desde CD, con partición de arranque sin montar, con `.iso` por loop y dos pruebas de exclusión del destino; ayuda por lista en modo oscuro y claro). Pendiente: prueba en hardware real (el fallo original era en la Dell con Ventoy), arranque desde USB grabada en máquina real, formatos, dd y descarga en la 1.2.
+Versión 1.3 (prerelease): probada en invitado FLinux 17.1 sin wifi (opción 3 con boot manual, con carpeta tce manual y regresión con los cuadros vacíos; la detección automática 1.2 sigue intacta). Pendiente: prueba en hardware real (el fallo original era en la Dell con Ventoy), arranque desde USB grabada en máquina real, formatos, dd y descarga en la 1.3.
 
 ## Licencia
 
