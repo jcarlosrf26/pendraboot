@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Pendraboot
+Comment=Formatea y crea USB booteables
+Exec=pendraboot
+Icon=pendraboot
+Categories=System;Utility;
+Terminal=false
