@@ -52,3 +52,7 @@ Copiar `pendraboot-1.1.tcz`, `pendraboot-1.1.tcz.dep` y `pendraboot-1.1.tcz.md5.
 ## Estado
 
 Versión 1.1 (prerelease): probada en invitado FLinux 17.1 sin wifi. Pendiente: prueba en hardware real, formatos, dd, descarga y opción 3 completos.
+
+## Licencia
+
+PendraBoot se distribuye bajo la Licencia Pública General de GNU, versión 3 (GPL-3.0). Ver el archivo `LICENSE`.
