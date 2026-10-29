@@ -10,50 +10,31 @@ Escrito en C++ con FLTK, compilado dentro de FLinux 17.1 de 32 bits y empaquetad
 
 ## Funciones
 
+- Ventana compacta (620×460) con desplegable de Modo: solo se ven los controles del modo elegido.
 - Detecta solo memorias USB extraíbles: el disco interno nunca aparece en la lista.
-- Formatea en FAT32, NTFS, ext4 y btrfs, con etiqueta y confirmación antes de borrar.
+- Formatea en FAT32, NTFS y ext4, con etiqueta y confirmación antes de borrar.
 - Crea USB booteables de tres formas:
   1. Descargando la ISO oficial de FLinux (con wifi o sin wifi).
   2. Usando una ISO local que ya tengas guardada (sirve cualquier ISO booteable, no solo FLinux).
-  3. Creando una ISO de tu sistema instalado, con todos sus programas.
-- La opción 3 detecta automáticamente el kernel y el core del sistema: particiones montadas (en `/boot` y en la raíz), particiones sin montar (montaje solo lectura) y dentro de archivos `.iso` por loop (caso Ventoy).
-- La opción 3 también permite elegir a mano el kernel/core y la carpeta de extensiones, con dos cuadros y botón Examinar. Si los dos cuadros se dejan vacíos, se usa la detección automática.
-- La USB destino queda excluida por completo de la búsqueda de la opción 3: no hace falta formatearla antes, y una versión vieja instalada en ella no puede colarse en la ISO.
+  3. Creando un remaster de tu sistema instalado.
+- El remaster es solo manual: hay que rellenar los dos cuadros, `core.gz:` (archivo core.gz o carpeta boot) y `Extensiones (tce/cde):` (carpeta con `optional/` y `onboot.lst`), con botones `...` para elegir. Si un cuadro está vacío, muestra un error en vez de buscar.
 - Modo oscuro (por defecto) y modo claro en gris claro estilo flfm.
 - Botón de ayuda con pestañas: Qué es, Cómo se usa (pasos ordenados por lista) y Autores.
 - Al instalar, deja su icono en el wbar.
 
 ## Imágenes
 
-Modo oscuro:
+Ventana principal, modo Descargar:
 
-![PendraBoot en modo oscuro](images/pendraboot-oscuro.jpg)
+![Ventana principal de PendraBoot 1.4](images/pendraboot-14-principal.jpg)
 
-Modo claro:
+Modo remaster, con los cuadros manuales:
 
-![PendraBoot en modo claro](images/pendraboot-claro.jpg)
+![Modo remaster de PendraBoot 1.4](images/pendraboot-14-remaster.jpg)
 
-Ventana de ayuda:
+Remaster completado:
 
-![Ayuda de PendraBoot](images/pendraboot-ayuda.jpg)
-
-Cabecera con los iconos centrados:
-
-![Cabecera de PendraBoot](images/pendraboot-cabecera.jpg)
-
-Icono en el wbar al instalar:
-
-![Icono de PendraBoot en el wbar](images/pendraboot-wbar.jpg)
-
-Ayuda «Cómo se usa» por lista, en modo oscuro y en modo claro:
-
-![Ayuda por lista en modo oscuro](images/pendraboot-ayuda-lista-oscuro.jpg)
-
-![Ayuda por lista en modo claro](images/pendraboot-ayuda-lista-claro.jpg)
-
-Sección de la opción 3 con los cuadros manuales:
-
-![Sección opción 3 con cuadros manuales](images/pendraboot-seccion3-1.3.jpg)
+![Remaster completado en PendraBoot 1.4](images/pendraboot-14-completado.jpg)
 
 ## Créditos
 
@@ -61,11 +42,11 @@ Idea original: Nicolás Longardi, creador de FLinux, que dio la idea en un direc
 
 ## Instalación
 
-Copiar `pendraboot-1.3.tcz`, `pendraboot-1.3.tcz.dep` y `pendraboot-1.3.tcz.md5.txt` (de la Release) a `tce/optional/`, añadir `pendraboot-1.3` a `onboot.lst` (o `tce-load -i pendraboot-1.3.tcz`) y ejecutar `pendraboot`.
+Copiar `pendraboot-1.4.tcz`, `pendraboot-1.4.tcz.dep` y `pendraboot-1.4.tcz.md5.txt` (de la Release) a `tce/optional/`, añadir `pendraboot-1.4` a `onboot.lst` (o `tce-load -i pendraboot-1.4.tcz`) y ejecutar `pendraboot`.
 
 ## Estado
 
-Versión 1.3 (prerelease): probada en invitado FLinux 17.1 sin wifi (opción 3 con boot manual, con carpeta tce manual y regresión con los cuadros vacíos; la detección automática sigue intacta). Pendiente: prueba en hardware real (el fallo original era en la Dell con Ventoy), arranque desde USB grabada en máquina real, formatos, dd y descarga en la 1.3.
+Versión 1.4 (prerelease): probada en invitado FLinux 17.1 sin wifi (ventana compacta, cambio de modo, remaster manual completado, error con los cuadros vacíos, desplegable de formato sin btrfs y botones `...`) y en invitado FLinux 17.2 sin wifi (las 3 fotos de arriba). Pendiente: prueba en hardware real, arranque desde USB grabada en máquina real, descarga, formatos y dd de ISO local por GUI, conmutador de tema claro/oscuro en la 1.4 y pestañas «Cómo se usa»/«Autores» de la ayuda.
 
 ## Licencia
 
